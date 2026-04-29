@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "584722890120",
+    "project_id": "bdfruteria",
+    "storage_bucket": "bdfruteria.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584722890120:android:47a2ced2ac7c1e9c0e8e3d",
+        "android_client_info": {
+          "package_name": "com.example.dbfruteria"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS4WJHZWoemkDubn8DjtuAiSNjWi10vjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
