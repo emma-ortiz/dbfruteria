@@ -27,3 +27,11 @@ class FirestoreService {
     await db.collection('frutas').doc(id).delete();
   }
 }
+
+// OBTENER CATEGORIAS
+Stream<List<Categoria>> obtenerCategorias() {
+  return db.collection('categorias').snapshots().map((snapshot) =>
+      snapshot.docs
+          .map((doc) => Categoria.fromFirestore(doc.id, doc.data()))
+          .toList());
+}
