@@ -2,20 +2,20 @@ class Fruta {
   String id;
   String nombre;
   double precio;
-  String categoria;
+  String categoriaId;
 
   Fruta({
     required this.id,
     required this.nombre,
     required this.precio,
-    required this.categoria,
+    required this.categoriaId,
   });
 
   Map<String, dynamic> toMap() {
     return {
       'nombre': nombre,
       'precio': precio,
-      'categoria': categoria,
+      'categoriaId': categoriaId,
     };
   }
 
@@ -24,7 +24,7 @@ class Fruta {
       id: id,
       nombre: data['nombre'],
       precio: (data['precio'] as num).toDouble(),
-      categoria: data['categoria'],
+      categoriaId: data['categoriaId'],
     );
   }
 }
