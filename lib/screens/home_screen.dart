@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Frutería Admin")),
+      appBar: AppBar(title: Text("Frutería")),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context,
@@ -27,31 +27,13 @@ class HomeScreen extends StatelessWidget {
           return ListView.builder(
             itemCount: frutas.length,
             itemBuilder: (context, i) {
-              final fruta = frutas[i];
+              final f = frutas[i];
               return ListTile(
-                title: Text(fruta.nombre),
-                subtitle: Text("Precio: ${fruta.precio}"),
-                trailing: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.edit),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => AddEditFruta(fruta: fruta),
-                          ),
-                        );
-                      },
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.delete),
-                      onPressed: () {
-                        service.eliminarFruta(fruta.id);
-                      },
-                    ),
-                  ],
+                title: Text(f.nombre),
+                subtitle: Text("Precio: ${f.precio}"),
+                trailing: IconButton(
+                  icon: Icon(Icons.delete),
+                  onPressed: () => service.eliminarFruta(f.id),
                 ),
               );
             },
